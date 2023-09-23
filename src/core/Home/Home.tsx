@@ -1,7 +1,17 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 
-import { Page } from "uikit";
+import { useTranslation } from "i18nano";
+
+import { Page, PageHeader } from "uikit";
 
 export const Home: FC = () => {
-  return <Page>ok</Page>;
+  const t = useTranslation();
+
+  return (
+    <Page
+      pageHeader={<PageHeader title="home.title" subTitle="home.subtitle" />}
+    >
+      {t("app.name")}
+    </Page>
+  );
 };

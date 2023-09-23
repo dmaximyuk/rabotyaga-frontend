@@ -1,26 +1,27 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./styles/main.scss";
 
-import { routes } from "routes";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById("root")!);
-const logo: string =
-`
-     DDD     M       M
-    D   D    M M   M M
-    D   D    M  M M  M
-   DDDDDDD   M  M M  M
-  D       D  M   M   M
-`;
+import { TranslationProvider } from "i18nano";
+import { Router } from "@elum/router";
+
+import { App } from "core";
+
+import { ru } from "localization";
+
+const translations = {
+  ru: async () => ru,
+};
+
+const root = createRoot(document.getElementById("root")!);
 
 root.render(
-  <React.StrictMode>
-    <RouterProvider
-      router={(() => {
-        console.log(logo);
-        return createBrowserRouter(routes);
-      })()}
-    />
-  </React.StrictMode>
+  <StrictMode>
+    <TranslationProvider translations={translations} language="ru">
+      <Router branch="app">
+        <App />
+      </Router>
+    </TranslationProvider>
+  </StrictMode>,
 );

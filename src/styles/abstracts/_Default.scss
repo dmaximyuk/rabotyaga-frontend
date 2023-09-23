@@ -1,15 +1,5 @@
-@import "./Vars";
-
-html {
-  scroll-behavior: smooth;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-}
-
-i {
-  //color: $purple;
+#root {
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
 }

@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": ".",
   "engines": {
-    "node": "18.16.0"
+    "node": "18.18.0"
   },
   "scripts": {
     "dev": "vite",
@@ -13,21 +13,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@elum/router": "^0.0.13",
+    "i18nano": "^4.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.10.0",
-    "sass": "^1.61.0"
+    "sass": "^1.61.0",
+    "vite-plugin-svgr": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.2.5",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react-swc": "^3.0.0",
+    "gh-pages": "^5.0.0",
     "prettier": "^2.8.8",
     "terser": "^5.17.7",
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
-    "vite-tsconfig-paths": "^4.0.8",
-    "gh-pages": "^5.0.0"
+    "vite-tsconfig-paths": "^4.0.8"
   }
 }

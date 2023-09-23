@@ -1,20 +1,27 @@
-import { FC } from "react";
-
-import { classNames } from "functions";
-
-import { PageProps } from "./";
-
 import styles from "./Page.module.scss";
 
-export const Page: FC<PageProps> = ({ className = "", children }) => {
+import { FC } from "react";
+import { classNames } from "functions";
+
+import { PageProps } from "./Page.interface";
+
+export const Page: FC<PageProps> = ({
+  className = "",
+  children,
+  pageHeader,
+}) => {
   return (
-    <div
-      className={classNames({
-        [styles.Page]: true,
-        [className]: !!className,
-      })}
-    >
-      {children}
-    </div>
+    <>
+      {pageHeader}
+      <section
+        className={classNames({
+          [styles.Page]: true,
+          [className]: !!className,
+        })}
+      >
+        <div>123</div>
+        {children}
+      </section>
+    </>
   );
 };

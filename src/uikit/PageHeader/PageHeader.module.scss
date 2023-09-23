@@ -1,0 +1,9 @@
+.PageHeader {
+  background-color: var(--page-background);
+  padding: 0 var(--padding-default);
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
