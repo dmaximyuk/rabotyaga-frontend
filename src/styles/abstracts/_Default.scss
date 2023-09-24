@@ -1,5 +1,11 @@
+body {
+  background-color: var(--body-background) !important;
+}
+
 #root {
   height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }

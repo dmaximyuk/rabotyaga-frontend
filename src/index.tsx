@@ -2,7 +2,6 @@ import "./styles/main.scss";
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-
 import { TranslationProvider } from "i18nano";
 import { Router } from "@elum/router";
 
@@ -19,7 +18,7 @@ const root = createRoot(document.getElementById("root")!);
 root.render(
   <StrictMode>
     <TranslationProvider translations={translations} language="ru">
-      <Router branch="app">
+      <Router branch="user">
         <App />
       </Router>
     </TranslationProvider>

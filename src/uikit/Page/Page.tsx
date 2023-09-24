@@ -19,7 +19,6 @@ export const Page: FC<PageProps> = ({
           [className]: !!className,
         })}
       >
-        <div>123</div>
         {children}
       </section>
     </>

@@ -9,8 +9,8 @@ import type { PageHeaderProps } from "./PageHeader.interface";
 export const PageHeader: FC<PageHeaderProps> = ({ title, subTitle }) => {
   return (
     <header className={styles.PageHeader}>
-      <Text mode="text" path={title} />
-      <Text mode="description" path={subTitle} />
+      <Text mode="text" text={title} />
+      <Text mode="description" text={subTitle} />
     </header>
   );
 };

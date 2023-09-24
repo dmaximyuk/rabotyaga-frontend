@@ -9,6 +9,7 @@
   &_mode {
     &-title-bold,
     &-text-bold,
+    &-text-bold-transparent,
     &-description-bold {
       font-weight: bold;
     }
@@ -20,16 +21,21 @@
     }
 
     &-text,
-    &-text-bold {
+    &-text-bold,
+    &-text-bold-transparent {
       font-size: 16px;
       line-height: 20px;
+    }
+
+    &-text-bold-transparent {
+      color: var(--font-color-text-transparent);
     }
 
     &-description,
     &-description-bold {
       font-size: 14px;
       line-height: 18px;
-      color: var(--font-color-description);
+      color: var(--font-color-default-transparent);
     }
   }
 }

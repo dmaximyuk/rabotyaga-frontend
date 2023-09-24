@@ -3,10 +3,11 @@ type TextMode =
   | "title-bold"
   | "text"
   | "text-bold"
+  | "text-bold-transparent"
   | "description"
   | "description-bold";
 
 export interface TextProps {
-  path: string;
+  text: string;
   mode: TextMode;
 }

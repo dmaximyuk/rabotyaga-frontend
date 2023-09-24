@@ -2,20 +2,16 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "assets": ["assets"],
-      "blocks": ["blocks"],
-      "section": ["section"],
-      "store": ["store"],
-      "pages": ["pages"],
-      "navigation": ["navigation"],
-      "other": ["other"],
+      "core": ["core"],
       "uikit": ["uikit"],
+      "components": ["components"],
+      "functions": ["functions"],
       "hooks": ["hooks"],
-      "translation": ["translation"],
-      "types": ["types"],
-      "locale": ["locale"],
       "styles": ["styles"],
-      "functions": ["functions"]
+      "localization": ["localization"],
+      "assets": ["assets"],
+      "types": ["types"],
+      "store": ["store"]
     }
   }
 }

@@ -1,0 +1,26 @@
+.Ripple {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  &__effect {
+    transform: scale(0);
+    border-radius: 100%;
+    position: absolute;
+    opacity: 0.75;
+    background-color: var(--accent);
+    animation-name: ripple;
+    animation-duration: 700ms;
+    z-index: 1000000;
+    pointer-events: none;
+  }
+
+  @keyframes ripple {
+    to {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+}

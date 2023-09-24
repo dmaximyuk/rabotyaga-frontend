@@ -1,16 +1,24 @@
 body {
   --body-background: #141414;
   --page-background: #141414;
-  --component-background: #222;
+  --component-background: #222222;
 
   --accent: #f1fe09;
   --accent--extra: #99a2ad;
 
   --font-color-default: #d1d1d1;
-  --font-color-description: rgba(209, 209, 209, 0.6);
+  --font-color-default-transparent: rgba(209, 209, 209, 0.6);
 
   --padding-large: 16px;
   --padding-middle: 12px;
   --padding-small: 8px;
   --padding-default: var(--padding-middle);
+
+  --radius-large: 30px;
+  --radius-middle: calc(var(--radius-large) / 2);
+  --radius-small: calc(var(--radius-middle) / 2);
+  --radius-default: var(--radius-middle);
+
+  --page-header-height: 56px;
+  --tabbar-height: 48px;
 }

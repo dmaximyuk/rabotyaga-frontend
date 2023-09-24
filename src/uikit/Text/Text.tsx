@@ -7,7 +7,7 @@ import { classNames } from "functions";
 
 import type { TextProps } from "./Text.interface";
 
-export const Text: FC<TextProps> = ({ path, mode }) => {
+export const Text: FC<TextProps> = ({ text, mode }) => {
   const t = useTranslation();
 
   const tag = useMemo(() => {
@@ -17,6 +17,7 @@ export const Text: FC<TextProps> = ({ path, mode }) => {
         return "h1";
       case "text":
       case "text-bold":
+      case "text-bold-transparent":
         return "p";
       case "description":
       case "description-bold":
@@ -32,6 +33,6 @@ export const Text: FC<TextProps> = ({ path, mode }) => {
         [styles[`Text_mode-${mode}`]]: true,
       }),
     },
-    t(path),
+    t(text) || text,
   );
 };

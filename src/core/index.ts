@@ -1,2 +1,2 @@
-export * from './App/App'
-export * from "./Home/Home";
+export * from "./App/App";
+export * from "./User/User";
