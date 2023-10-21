@@ -23,14 +23,14 @@ export const Ripple: React.FC<RippleProps> = ({ onClick }) => {
     return () => clearTimeout(timer);
   }, [rippleArray.length]);
 
-  const addRipple = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const rippleContainer = event.currentTarget.getBoundingClientRect();
+  const addRipple = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const rippleContainer = e.currentTarget.getBoundingClientRect();
     const size =
       rippleContainer.width > rippleContainer.height
         ? rippleContainer.width
         : rippleContainer.height;
-    const x = event.clientX - rippleContainer.x - size / 2;
-    const y = event.clientY - rippleContainer.y - size / 2;
+    const x = e.clientX - rippleContainer.x - size / 2;
+    const y = e.clientY - rippleContainer.y - size / 2;
 
     const newRipple = {
       x,

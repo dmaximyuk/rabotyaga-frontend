@@ -1,11 +1,11 @@
-import styles from "./Page.module.scss";
+import "./Panel.sass";
 
-import { FC } from "react";
+import { type FC } from "react";
 import { classNames } from "functions";
 
-import { PageProps } from "./Page.interface";
+import { PageProps } from "./Panel.interface";
 
-export const Page: FC<PageProps> = ({
+export const Panel: FC<PageProps> = ({
   className = "",
   children,
   pageHeader,
@@ -13,14 +13,14 @@ export const Page: FC<PageProps> = ({
   return (
     <>
       {pageHeader}
-      <section
+      <div
         className={classNames({
-          [styles.Page]: true,
+          Panel: true,
           [className]: !!className,
         })}
       >
         {children}
-      </section>
+      </div>
     </>
   );
 };

@@ -3,7 +3,7 @@ import "./styles/main.scss";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { TranslationProvider } from "i18nano";
-import { Router } from "@elum/router";
+import { Router } from "elum-router/react";
 
 import { App } from "core";
 

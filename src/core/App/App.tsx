@@ -1,48 +1,54 @@
-import { FC } from "react";
-import { useRouter } from "@elum/router";
+import { type FC } from "react";
+import { useRouter } from "elum-router/react";
 
-import { User } from "core";
-import { PageSwitch, Tabbar } from "uikit";
+import { Home } from "core";
+import { Root, BottomNavbar } from "uikit";
 
 import { IconHome, IconArchive, IconDots } from "@tabler/icons-react";
 
 export const App: FC = () => {
   const view = useRouter("view");
 
-  const pages = [
+  const views = [
     {
       icon: <IconHome />,
       key: "user",
-      child: <User data-page="user" />,
+      child() {
+        return <Home data-view={this.key} />;
+      },
     },
     {
       icon: <IconArchive />,
       key: "inventory",
-      child: <User data-page="inventory" />,
+      child() {
+        return <Home data-view={this.key} />;
+      },
     },
     {
       icon: <IconDots />,
       key: "more",
-      child: <User data-page="more" />,
+      child() {
+        return <Home data-view={this.key} />;
+      },
     },
   ];
 
   return (
-    <PageSwitch
-      activePage={view}
-      tabbar={
-        <Tabbar
+    <Root
+      activeView={view}
+      bottomNavbar={
+        <BottomNavbar
           activeTab={view}
-          items={pages.map((tab) => {
+          items={views.map((item) => {
             return {
-              key: tab.key,
-              icon: tab.icon,
+              key: item.key,
+              icon: item.icon,
             };
           })}
         />
       }
     >
-      {pages.map((page) => page.child)}
-    </PageSwitch>
+      {views.map((item) => item.child())}
+    </Root>
   );
 };

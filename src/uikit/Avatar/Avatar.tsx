@@ -1,9 +1,34 @@
-import styles from "./Avatar.module.scss";
+import "./Avatar.sass";
 
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 
 import type { AvatarProps } from "./Avatar.interface";
+import { classNames } from "functions";
 
 export const Avatar: FC<AvatarProps> = ({ src }) => {
-  return <div className={styles.Avatar} style={{ backgroundImage: `url(${src})` }} />;
+  const [loadingStatus, setLoadingStatus] = useState<
+    "loading" | "error" | undefined
+  >("loading");
+
+  useEffect(() => {
+    console.log("Avatar loading status:", loadingStatus);
+  }, [loadingStatus]);
+
+  return (
+    <div className="Avatar">
+      <img
+        className={classNames({
+          Avatar__image: true,
+          Avatar__image_error: loadingStatus === "error",
+          Avatar__image_loading: loadingStatus === "loading",
+        })}
+        alt=""
+        loading="lazy"
+        src={src}
+        onError={() => setLoadingStatus("error")}
+        onLoad={() => setLoadingStatus(undefined)}
+      />
+      &#xea54;
+    </div>
+  );
 };

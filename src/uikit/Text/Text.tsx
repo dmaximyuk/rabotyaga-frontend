@@ -1,6 +1,6 @@
-import styles from "./Text.module.scss";
+import "./Text.sass";
 
-import { FC, createElement, useMemo } from "react";
+import { type FC, createElement, useMemo } from "react";
 import { useTranslation } from "i18nano";
 
 import { classNames } from "functions";
@@ -29,8 +29,8 @@ export const Text: FC<TextProps> = ({ text, mode }) => {
     tag,
     {
       className: classNames({
-        [styles.Text]: true,
-        [styles[`Text_mode-${mode}`]]: true,
+        Text: true,
+        [`Text_mode--${mode}`]: true,
       }),
     },
     t(text) || text,

@@ -1,0 +1,33 @@
+.Text
+  color: var(--font-color-default)
+  font:
+    family: -apple-system, system-ui, Helvetica Neue, Roboto, sans-serif
+    feature-settings: "clig" off, "liga" off
+    style: normal
+
+  &_mode
+    &--title-bold,
+    &--text-bold,
+    &--text-bold-transparent,
+    &--description-bold
+      font-weight: bold
+
+    &--title,
+    &--title-bold
+      font-size: 18px
+      line-height: 22px
+
+    &--text,
+    &--text-bold,
+    &--text-bold-transparent
+      font-size: 16px
+      line-height: 20px
+
+    &--text-bold-transparent
+      color: var(--font-color-text-transparent)
+
+    &--description,
+    &--description-bold
+      font-size: 14px
+      line-height: 18px
+      color: var(--font-color-default-transparent)
