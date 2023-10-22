@@ -1,3 +1,5 @@
+import { type TranslationValues } from "i18nano";
+
 type TextMode =
   | "title"
   | "title-bold"
@@ -8,6 +10,9 @@ type TextMode =
   | "description-bold";
 
 export interface TextProps {
+  className?: string;
   text: string;
   mode: TextMode;
+  isDescription?: boolean;
+  values?: TranslationValues;
 }

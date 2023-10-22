@@ -1,12 +1,19 @@
 .PanelHeader
   display: flex
-  flex-direction: column
-  justify-content: center
+  align-items: center
   height: var(--page-header-height)
   width: 100%
   padding: 0 var(--padding-default)
   background-color: var(--page-background)
   box-sizing: border-box
-  position: fixed
-  top: 0
-  left: 0
+  gap: var(--padding-default)
+  z-index: 1
+
+  &__button-back
+    position: relative
+    overflow: hidden
+    padding: 0 var(--padding-small)
+    display: flex
+    justify-content: center
+    align-items: center
+    color: var(--font-color-default)

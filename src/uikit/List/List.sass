@@ -1,0 +1,23 @@
+.List
+  &__item
+    display: flex
+    justify-content: space-between
+    position: relative
+    padding: var(--padding-default)
+    overflow: hidden
+
+    &:not(:last-child)
+      &::before
+        content: ""
+        position: absolute
+        bottom: -1px
+        right: 0
+        width: calc(100% - var(--padding-default))
+        height: 2px
+        background-color: var(--body-background)
+
+    & > svg
+      width: 24px
+      height: 24px
+      color: var(--font-color-default)
+      stroke-width: 1.7

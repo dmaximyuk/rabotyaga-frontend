@@ -9,3 +9,5 @@ export * from "./BottomNavbar/BottomNavbar";
 export * from "./Ripple/Ripple";
 export * from "./Avatar/Avatar";
 export * from "./Root/Root";
+export * from "./Divider/Divider";
+export * from "./List/List";

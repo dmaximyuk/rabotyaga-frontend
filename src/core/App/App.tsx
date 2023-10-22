@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import { useRouter } from "elum-router/react";
 
-import { Home } from "core";
+import { Home, More } from "core";
 import { Root, BottomNavbar } from "uikit";
 
 import { IconHome, IconArchive, IconDots } from "@tabler/icons-react";
@@ -12,7 +12,7 @@ export const App: FC = () => {
   const views = [
     {
       icon: <IconHome />,
-      key: "user",
+      key: "main",
       child() {
         return <Home data-view={this.key} />;
       },
@@ -28,7 +28,7 @@ export const App: FC = () => {
       icon: <IconDots />,
       key: "more",
       child() {
-        return <Home data-view={this.key} />;
+        return <More data-view={this.key} />;
       },
     },
   ];

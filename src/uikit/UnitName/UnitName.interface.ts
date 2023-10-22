@@ -1,3 +1,3 @@
 export interface UnitNameProps {
-  id: number;
+  userId: number;
 }

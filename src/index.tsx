@@ -18,7 +18,7 @@ const root = createRoot(document.getElementById("root")!);
 root.render(
   <StrictMode>
     <TranslationProvider translations={translations} language="ru">
-      <Router branch="user">
+      <Router branch="main">
         <App />
       </Router>
     </TranslationProvider>

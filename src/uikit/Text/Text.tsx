@@ -7,7 +7,13 @@ import { classNames } from "functions";
 
 import type { TextProps } from "./Text.interface";
 
-export const Text: FC<TextProps> = ({ text, mode }) => {
+export const Text: FC<TextProps> = ({
+  className,
+  text,
+  mode,
+  isDescription = false,
+  values,
+}) => {
   const t = useTranslation();
 
   const tag = useMemo(() => {
@@ -31,8 +37,10 @@ export const Text: FC<TextProps> = ({ text, mode }) => {
       className: classNames({
         Text: true,
         [`Text_mode--${mode}`]: true,
+        [`Text--description`]: isDescription,
+        [`${className}`]: !!className,
       }),
     },
-    t(text) || text,
+    t(text, values) || text,
   );
 };
