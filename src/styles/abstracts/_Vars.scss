@@ -7,7 +7,9 @@ body {
   --accent--extra: #99a2ad;
 
   --font-color-default: #d1d1d1;
-  --font-color-default-transparent: rgba(209, 209, 209, 0.6);
+  --font-color-default-transparent: rgba(209, 209, 209);
+
+  --icon-color: var(--accent--extra);
 
   --padding-large: 16px;
   --padding-middle: 12px;

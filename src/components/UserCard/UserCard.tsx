@@ -30,11 +30,12 @@ export const UserCard: FC<UserCardProps> = (props) => {
         {props.isShort ? (
           <Text
             text="users.card.short.level"
-            mode="description"
+            tag="span"
             values={{
               level: level.level.toString(),
               percentage: level.percentage,
             }}
+            isTransparent
           />
         ) : (
           renderUserId()

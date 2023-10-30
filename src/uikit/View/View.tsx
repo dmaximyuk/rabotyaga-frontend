@@ -67,6 +67,7 @@ export const View: FC<ViewProps> = ({ activePanel, children }) => {
         ) {
           return (
             <div
+              key={`view-${element.props["data-panel"]}`}
               onAnimationEnd={() =>
                 isActive(element.props["data-panel"]) &&
                 setStore({

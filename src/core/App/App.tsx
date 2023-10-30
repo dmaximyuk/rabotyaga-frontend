@@ -14,21 +14,21 @@ export const App: FC = () => {
       icon: <IconHome />,
       key: "main",
       child() {
-        return <Home data-view={this.key} />;
+        return <Home key={`app-view-${this.key}`} data-view={this.key} />;
       },
     },
     {
       icon: <IconArchive />,
       key: "inventory",
       child() {
-        return <Home data-view={this.key} />;
+        return <Home key={`app-view-${this.key}`} data-view={this.key} />;
       },
     },
     {
       icon: <IconDots />,
       key: "more",
       child() {
-        return <More data-view={this.key} />;
+        return <More key={`app-view-${this.key}`} data-view={this.key} />;
       },
     },
   ];

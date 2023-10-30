@@ -73,8 +73,8 @@ export const Menu: FC<MenuProps> = () => {
       <Divider />
       {itemsTree.map((items, index, array) => {
         return (
-          <>
-            <Container>
+          <div key={`menu-list-item-${index}`}>
+            <Container className="Menu__container-list">
               <List
                 items={items.map(({ to, icon }) => {
                   return {
@@ -86,7 +86,7 @@ export const Menu: FC<MenuProps> = () => {
               />
             </Container>
             {array.length - 1 !== index && <Divider />}
-          </>
+          </div>
         );
       })}
     </Panel>

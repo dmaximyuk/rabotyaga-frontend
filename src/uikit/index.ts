@@ -11,3 +11,5 @@ export * from "./Avatar/Avatar";
 export * from "./Root/Root";
 export * from "./Divider/Divider";
 export * from "./List/List";
+export * from "./Card/Card";
+export * from "./Line/Line";

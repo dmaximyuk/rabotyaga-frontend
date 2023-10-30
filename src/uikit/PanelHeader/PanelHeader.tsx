@@ -22,8 +22,8 @@ export const PanelHeader: FC<PageHeaderProps> = ({
       )}
 
       <div>
-        <Text mode="text" text={title} />
-        <Text mode="description" text={subTitle} />
+        <Text tag="p" text={title} />
+        <Text tag="span" isTransparent text={subTitle} />
       </div>
     </header>
   );
