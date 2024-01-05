@@ -1,0 +1,43 @@
+{
+  "app": {
+    "name": "Rabotyaga"
+  },
+  "home": {
+    "title": "Пользователь",
+    "subtitle": "Профиль"
+  },
+  "menu": {
+    "title": "Еще",
+    "subtitle": "Меню",
+    "item": {
+      "notifications": "Уведомления",
+      "achievements": "Достижения",
+      "bank": "Банк",
+      "job": "Работа",
+      "business": "Бизнес",
+      "mining": "Майнинг",
+      "investments": "Инвестиции",
+      "entertainment": "Развлечения",
+      "quests": "Квесты",
+      "present": "Подарки",
+      "shop": "Магазин",
+      "premium_store": "Магазин - Premium",
+      "market": "Рынок",
+      "auction": "Аукцион",
+      "help": "Помощь",
+      "community": "Сообщество",
+      "settings": "Настройки"
+    }
+  },
+  "settings": {
+    "title": "----",
+    "subtitle": "Настройки"
+  },
+  "users": {
+    "card": {
+      "level": {
+        "short": "{{level}} уровень ( {{percentage}} )"
+      }
+    }
+  }
+}

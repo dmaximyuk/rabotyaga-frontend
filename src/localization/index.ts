@@ -1,1 +1,5 @@
-export * from "./ru-RU";
+import ru from "./ru-RU.json";
+
+export {
+  ru
+}

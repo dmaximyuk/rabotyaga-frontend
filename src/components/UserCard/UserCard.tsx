@@ -29,7 +29,7 @@ export const UserCard: FC<UserCardProps> = (props) => {
 
         {props.isShort ? (
           <Text
-            text="users.card.short.level"
+            text="users.card.level.short"
             tag="span"
             values={{
               level: level.level.toString(),

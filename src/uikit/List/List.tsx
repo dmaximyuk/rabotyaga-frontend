@@ -17,8 +17,8 @@ export const List: FC<ListProps> = (props) => {
             className="List__item"
             onClick={() => nextPage({ panel: item.to })}
           >
-            <Text text={item.title} tag="p" />
             {item.icon}
+            <Text text={item.title} tag="p" />
           </div>
         );
       })}
