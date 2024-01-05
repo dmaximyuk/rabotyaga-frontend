@@ -3,13 +3,11 @@
     "name": "Rabotyaga"
   },
   "home": {
-    "title": "Пользователь",
-    "subtitle": "Профиль"
+    "title": "Пользователь"
   },
   "menu": {
-    "title": "Еще",
-    "subtitle": "Меню",
-    "item": {
+    "title": "Меню",
+    "items": {
       "notifications": "Уведомления",
       "achievements": "Достижения",
       "bank": "Банк",
@@ -21,7 +19,7 @@
       "quests": "Квесты",
       "present": "Подарки",
       "shop": "Магазин",
-      "premium_store": "Магазин - Premium",
+      "premium_store": "Донат",
       "market": "Рынок",
       "auction": "Аукцион",
       "help": "Помощь",
@@ -30,8 +28,7 @@
     }
   },
   "settings": {
-    "title": "----",
-    "subtitle": "Настройки"
+    "title": "Настройки"
   },
   "users": {
     "card": {
