@@ -1,5 +1,5 @@
 export interface PageHeaderProps {
   title: string;
-  subTitle: string;
+  subtitle: string;
   withBack?: boolean;
 }

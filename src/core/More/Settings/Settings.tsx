@@ -12,7 +12,7 @@ export const Settings: FC<SettingsProps> = () => {
       pageHeader={
         <PanelHeader
           title="settings.title"
-          subTitle="settings.subtitle"
+          subtitle="settings.subtitle"
           withBack
         />
       }

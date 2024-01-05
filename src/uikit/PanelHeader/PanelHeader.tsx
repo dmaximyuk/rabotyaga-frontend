@@ -10,6 +10,7 @@ import type { PageHeaderProps } from "./PanelHeader.interface";
 
 export const PanelHeader: FC<PageHeaderProps> = ({
   title,
+  subtitle,
   withBack = false,
 }) => {
   return (
@@ -21,7 +22,8 @@ export const PanelHeader: FC<PageHeaderProps> = ({
       )}
 
       <div>
-        <Text tag="p" isBold text={title} />
+        <Text tag="p" text={title} />
+        <Text tag="span" isTransparent text={subtitle} />
       </div>
     </header>
   );

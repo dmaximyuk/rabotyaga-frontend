@@ -18,7 +18,7 @@ const userNavigationCards = [
 export const User: FC = () => {
   return (
     <Panel
-      pageHeader={<PanelHeader title="home.title" subTitle="home.subtitle" />}
+      pageHeader={<PanelHeader title="home.title" subtitle="home.subtitle" />}
     >
       <UserCard userId={123} />
       <Container className="User__navigation" isDefault>

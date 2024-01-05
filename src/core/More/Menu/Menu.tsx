@@ -61,7 +61,7 @@ const itemsTree = [
 export const Menu: FC<MenuProps> = () => {
   return (
     <Panel
-      pageHeader={<PanelHeader title="menu.title" subTitle="menu.subtitle" />}
+      pageHeader={<PanelHeader title="menu.title" subtitle="menu.subtitle" />}
     >
       <Container className="Menu__container-user">
         <UserCard
@@ -78,7 +78,7 @@ export const Menu: FC<MenuProps> = () => {
               <List
                 items={items.map(({ to, icon }) => {
                   return {
-                    title: `menu.item.${to}`,
+                    title: `menu.items.${to}`,
                     to,
                     icon,
                   };

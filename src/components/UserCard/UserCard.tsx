@@ -1,6 +1,7 @@
 import "./UserCard.sass";
 
 import { type FC } from "react";
+import { classNames } from "functions";
 import { useUserLevel } from "hooks";
 
 import { Text, UnitIdentifier, UnitName } from "uikit";
@@ -21,9 +22,14 @@ export const UserCard: FC<UserCardProps> = (props) => {
       onClick={() => props.onClick && props.onClick(props.userId)}
     >
       <UserAvatar userId={props.userId} />
-      <div className="UserCard__info">
+      <div
+        className={classNames({
+          UserCard__info: true,
+          ["UserCard__info--default"]: !props.isShort,
+        })}
+      >
         <div className="UserCard__info__name">
-          <UnitName userId={props.userId} />
+          <UnitName isBold={!props.isShort} userId={props.userId} />
           {props.isShort && renderUserId()}
         </div>
 
