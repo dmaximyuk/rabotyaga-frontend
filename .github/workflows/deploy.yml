@@ -26,11 +26,25 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: dmaximyuk/dev
+          token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+          fetch-depth: 0
 
       - name: Setup Node.js v${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+
+      - name: Clone GuillaumeFalourd/formulas-training PRIVATE repository
+        uses: GuillaumeFalourd/clone-github-repo-action@v2.3
+        with:
+          owner: 'dmaximyuk'
+          repository: 'rabotyaga-frontend'
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Access cloned repository content
+        run: |
+          cd rabotyaga-frontend
+          ls -la
 
       - name: Show Working directory
         run: ls
