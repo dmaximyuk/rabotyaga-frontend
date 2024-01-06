@@ -25,7 +25,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          repository: dmaximyuk/dev
           token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
           fetch-depth: 0
 
@@ -44,11 +43,12 @@ jobs:
         run: |
           git config --global user.name ${{ env.user_name }}
           git config --global user.email ${{ env.user_email }}
-          git remote set-url origin https://${github_token}@github.com/${repository}
-          npm run deploy
+          git remote add dev_repository https://${{ env.github_token }}@github.com/dmaximyuk/dev
+          echo $(git status)
+          git add -f ./dist
+          git commit -m "Deploy build from source repository"
+          git push -f dev_repository master -- dist
         env:
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
           github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-          repository: "dmaximyuk/dev"
-          repository_old: ${{ github.repository }}
