@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": ".",
+  "homepage": "https://dmaximyuk.github.io/dev",
   "engines": {
     "node": "20.3.1"
   },
