@@ -8,7 +8,7 @@ import svgr from "vite-plugin-svgr";
 import { compilerOptions } from "./tsconfig.json";
 
 export default defineConfig({
-  base: "/dist/",
+  base: "/dev/",
   publicDir: "public",
   esbuild: {
     pure: import.meta?.env?.DEV ? [] : ["console.log"],
