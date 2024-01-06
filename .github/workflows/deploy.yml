@@ -44,7 +44,7 @@ jobs:
           git config --global user.name ${{ env.user_name }}
           git config --global user.email ${{ env.user_email }}
           git remote add dev_repository https://${{ env.github_token }}@github.com/dmaximyuk/dev
-          git push --delete dev_repository master
+          git push --delete dev_repository gh-pages
           git add -f dist
           git commit -m "Deploy build from source repository"
           git subtree push --prefix=dist dev_repository gh-pages -f
