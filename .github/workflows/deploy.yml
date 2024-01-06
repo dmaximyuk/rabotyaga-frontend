@@ -31,6 +31,8 @@ jobs:
 
       - name: Deploy
         run: |
+          git config --global user.name $user_name
+          git config --global user.email $user_email
           git add -f dist
           git commit -m "Deploy build from source repository"
           git subtree push --prefix dist https://github.com/dmaximyuk/dev gh-pages
