@@ -48,7 +48,7 @@ jobs:
           git status
           git add -f .
           git commit -m "Deploy build from source repository"
-          git push dev_repository master
+          git push -f dev_repository master
         env:
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
