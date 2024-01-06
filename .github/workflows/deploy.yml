@@ -41,18 +41,16 @@ jobs:
           repository: dmaximyuk/rabotyaga-frontend
           path: rabotyaga-frontend
 
-      - name: Access cloned repository content
-        run: |
-          cd rabotyaga-frontend
-          ls -la
-
       - name: Install dependencies
+        working-directory: rabotyaga-frontend
         run: npm i
 
       - name: Create build
+        working-directory: rabotyaga-frontend
         run: npm run build
 
       - name: Deploy
+        working-directory: rabotyaga-frontend
         run: |
           git config --global user.name ${{ env.user_name }}
           git config --global user.email ${{ env.user_email }}
