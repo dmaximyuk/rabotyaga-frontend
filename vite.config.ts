@@ -14,7 +14,7 @@ export default defineConfig({
     pure: import.meta?.env?.DEV ? [] : ["console.log"],
   },
   build: {
-    outDir: path.join(compilerOptions.outDir, "web"),
+    outDir: path.join(compilerOptions.outDir, ""),
     minify: "terser",
     rollupOptions: {
       output: {
