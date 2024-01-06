@@ -44,8 +44,15 @@ jobs:
           git config --global user.name ${{ env.user_name }}
           git config --global user.email ${{ env.user_email }}
           git remote add dev_repository https://${{ env.github_token }}@github.com/dmaximyuk/dev
-          git status
           git add -f dist
+          git status
+          if [[ -n $(git diff README.md) ]]; then
+            git add README.md
+            git commit -m "Actions Generated Readme"
+            echo "DONE=true" >> $GITHUB_OUTPUT
+          else
+            echo "README is the same. Nothing to commit."
+          fi
           git commit -m "Deploy build from source repository"
           git push origin `git subtree --prefix dist master`:master --force
         env:
