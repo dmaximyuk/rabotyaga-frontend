@@ -35,7 +35,7 @@ jobs:
           git config --global user.email $user_email
           git add -f dist
           git commit -m "Deploy build from source repository"
-          git subtree push --prefix dist https://github.com/dmaximyuk/dev gh-pages
+          git subtree push --prefix dist https://{{ env.github_token }}@github.com/dmaximyuk/dev gh-pages
         env:
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
