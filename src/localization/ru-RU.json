@@ -12,8 +12,10 @@
     "items": {
       "notifications": "Уведомления",
       "achievements": "Достижения",
+      "bonus": "Бонус",
       "bank": "Банк",
       "job": "Работа",
+      "earnings": "Заработок",
       "business": "Бизнес",
       "mining": "Майнинг",
       "investments": "Инвестиции",

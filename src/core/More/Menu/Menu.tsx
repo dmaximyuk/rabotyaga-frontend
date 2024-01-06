@@ -10,18 +10,12 @@ import {
   IconSettings,
   IconUsers,
   IconHelpCircle,
-  IconCurrencyBitcoin,
-  IconDiamond,
   IconShoppingCart,
   IconDice5,
   IconRun,
   IconGift,
   IconBriefcase,
-  IconHomeStats,
-  IconChartLine,
-  IconGavel,
-  IconBuildingStore,
-  IconCertificate2,
+  IconTicket,
   IconBellRinging,
 } from "@tabler/icons-react";
 
@@ -30,26 +24,26 @@ import { MenuPanels } from "types/routes";
 
 const itemsTree = [
   [
-    { to: MenuPanels.Notifications, icon: <IconBellRinging /> },
-    { to: MenuPanels.Achievements, icon: <IconCertificate2 /> },
+    { to: MenuPanels.Present, icon: <IconGift /> },
+    { to: MenuPanels.Bonus, icon: <IconTicket /> },
   ],
-  [{ to: MenuPanels.Bank, icon: <IconBuildingBank /> }],
   [
-    { to: MenuPanels.Job, icon: <IconBriefcase /> },
-    { to: MenuPanels.Business, icon: <IconHomeStats /> },
-    { to: MenuPanels.Mining, icon: <IconCurrencyBitcoin /> },
-    { to: MenuPanels.Investments, icon: <IconChartLine /> },
+    { to: MenuPanels.Bank, icon: <IconBuildingBank /> },
+    { to: MenuPanels.Earnings, icon: <IconBriefcase /> },
   ],
+  // { to: MenuPanels.Job, icon: <IconBriefcase /> },
+  // { to: MenuPanels.Business, icon: <IconHomeStats /> },
+  // { to: MenuPanels.Mining, icon: <IconCurrencyBitcoin /> },
+  // { to: MenuPanels.Investments, icon: <IconChartLine /> },
   [
     { to: MenuPanels.Entertainment, icon: <IconDice5 /> },
     { to: MenuPanels.Quests, icon: <IconRun /> },
-    { to: MenuPanels.Present, icon: <IconGift /> },
   ],
   [
     { to: MenuPanels.Shop, icon: <IconShoppingCart /> },
-    { to: MenuPanels.PremiumStore, icon: <IconDiamond /> },
-    { to: MenuPanels.Market, icon: <IconBuildingStore /> },
-    { to: MenuPanels.Auction, icon: <IconGavel /> },
+    // { to: MenuPanels.PremiumStore, icon: <IconDiamond /> },
+    // { to: MenuPanels.Market, icon: <IconBuildingStore /> },
+    // { to: MenuPanels.Auction, icon: <IconGavel /> },
   ],
   [
     { to: MenuPanels.Help, icon: <IconHelpCircle /> },
@@ -61,7 +55,13 @@ const itemsTree = [
 export const Menu: FC<MenuProps> = () => {
   return (
     <Panel
-      pageHeader={<PanelHeader title="menu.title" subtitle="menu.subtitle" />}
+      pageHeader={
+        <PanelHeader
+          title="menu.title"
+          subtitle="menu.subtitle"
+          before={<IconBellRinging />}
+        />
+      }
     >
       <Container className="Menu__container-user">
         <UserCard

@@ -2,10 +2,18 @@ import "./User.sass";
 
 import { type FC } from "react";
 
-import { Card, Container, Line, Panel, PanelHeader, Text } from "uikit";
+import {
+  Card,
+  Container,
+  Divider,
+  Line,
+  Panel,
+  PanelHeader,
+  Text,
+} from "uikit";
 import { UserCard } from "components";
 
-import { IconChevronRight } from "@tabler/icons-react";
+import { IconBellRinging, IconChevronRight } from "@tabler/icons-react";
 
 import { MenuPanels } from "types/routes";
 
@@ -18,9 +26,20 @@ const userNavigationCards = [
 export const User: FC = () => {
   return (
     <Panel
-      pageHeader={<PanelHeader title="home.title" subtitle="home.subtitle" />}
+      pageHeader={
+        <PanelHeader
+          title="home.title"
+          before={<IconBellRinging />}
+          subtitle="home.subtitle"
+        />
+      }
     >
-      <UserCard userId={123} />
+      <Container isDefault>
+        <Card>
+          <UserCard userId={123} />
+        </Card>
+      </Container>
+      <Divider />
       <Container className="User__navigation" isDefault>
         {userNavigationCards.map((item) => {
           return (

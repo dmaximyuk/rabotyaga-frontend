@@ -25,18 +25,18 @@ export const UserCard: FC<UserCardProps> = (props) => {
       <div
         className={classNames({
           UserCard__info: true,
-          ["UserCard__info--default"]: !props.isShort,
+          ["UserCard__info--default"]: true,
         })}
       >
         <div className="UserCard__info__name">
-          <UnitName isBold={!props.isShort} userId={props.userId} />
+          <UnitName isBold userId={props.userId} />
           {props.isShort && renderUserId()}
         </div>
 
         {props.isShort ? (
           <Text
             text="users.card.level.short"
-            tag="span"
+            tag="p"
             values={{
               level: level.level.toString(),
               percentage: level.percentage,

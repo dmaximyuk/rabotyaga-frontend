@@ -12,13 +12,18 @@ export const PanelHeader: FC<PageHeaderProps> = ({
   title,
   subtitle,
   withBack = false,
+  before,
 }) => {
   return (
     <header className="PanelHeader">
-      {withBack && (
-        <div className="PanelHeader__button-back" onClick={() => backPage()}>
+      {withBack && !before && (
+        <div className="PanelHeader__icon--before" onClick={() => backPage()}>
           <IconArrowLeft />
         </div>
+      )}
+
+      {!withBack && before && (
+        <div className="PanelHeader__icon--before">{before}</div>
       )}
 
       <div>
