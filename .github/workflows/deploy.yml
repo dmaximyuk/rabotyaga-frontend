@@ -43,10 +43,9 @@ jobs:
         run: |
           git config --global user.name ${{ env.user_name }}
           git config --global user.email ${{ env.user_email }}
-          cd ./dist
-          git add -f .
+          git add -f dist
           git commit -m "Deploy build from source repository"
-          git push -f https://${{ env.github_token }}@github.com/dmaximyuk/dev gh-pages
+          git subtree push --prefix=dist https://${{ env.github_token }}@github.com/dmaximyuk/dev gh-pages -f
         env:
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
