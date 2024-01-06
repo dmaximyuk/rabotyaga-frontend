@@ -31,16 +31,9 @@ jobs:
 
       - name: Deploy
         run: |
-          npm run deploy
-#          git config --global user.name "${{ env.user_name }}"
-#          git config --global user.email "${{ env.user_email }}"
-#          git clone https://${{ env.github_token }}@github.com/${{ env.destination_repository }} dep_rep
-#          cd dep_rep
-#          rm -rf *
-#          cp -r ../dist/* .
-#          git add .
-#          git commit -m "Deploy build from source repository"
-#          git push origin master
+          git add dist
+          git commit -m "Deploy build from source repository"
+          git subtree push --prefix dist https://github.com/dmaximyuk/dev gh-pages
         env:
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
