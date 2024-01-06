@@ -44,10 +44,10 @@ jobs:
           git config --global user.name ${{ env.user_name }}
           git config --global user.email ${{ env.user_email }}
           git remote add dev_repository https://${{ env.github_token }}@github.com/dmaximyuk/dev
+          git add -f ./dist/*
           git status
-          git add -f dist
           git commit -m "Deploy build from source repository"
-          git subtree push --prefix=dist dev_repository gh-pages
+          git push -f dev_repository master -- ./dist/*
         env:
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
