@@ -48,7 +48,7 @@ jobs:
           git status
           git add -f .
           git commit -m "Deploy build from source repository"
-          git push -f dev_repository master -- dist/*
+          git subtree push --prefix=dist dev_repository gh-pages
         env:
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
