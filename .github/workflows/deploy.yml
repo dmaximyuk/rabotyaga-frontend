@@ -37,7 +37,6 @@ jobs:
           git commit -m "Deploy build from source repository"
           git subtree push --prefix dist https://${{ env.github_token }}@github.com/dmaximyuk/dev gh-pages
         env:
-          user_name: "dmaximyuk"
-          user_email: "d_maksimyk@vk.com"
-          github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-          destination_repository: "dmaximyuk/dev"
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
+          github_token: ${{ secrets.DEPENDABOT_TOKEN }}
