@@ -46,19 +46,13 @@ jobs:
           cd rabotyaga-frontend
           ls -la
 
-      - name: Show Working directory
-        run: ls
-
       - name: Install dependencies
-        working-directory: ./app
         run: npm i
 
       - name: Create build
-        working-directory: ./app
         run: npm run build
 
       - name: Deploy
-        working-directory: ./app
         run: |
           git config --global user.name ${{ env.user_name }}
           git config --global user.email ${{ env.user_email }}
