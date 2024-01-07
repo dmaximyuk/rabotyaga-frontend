@@ -1,4 +1,39 @@
+@mixin flexCentering
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
 .Menu
-    &-list
-      &:last-child
-        margin-bottom: var(--padding-default)
+  &__footer
+    @include flexCentering
+    height: 100px
+
+  &__cards_grid
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    gap: var(--padding-middle)
+
+    & > .Card
+      @include flexCentering
+      gap: var(--padding-small)
+      padding: 24px 0
+      min-width: 100%
+      min-height: 100%
+
+      @media screen and (max-width: 500px)
+        padding: 0
+        aspect-ratio: 1 / 1
+
+      & > div
+        @include flexCentering
+
+        & > *
+          white-space: nowrap
+          overflow: hidden
+          text-overflow: ellipsis
+
+
+  &-list
+    &:last-child
+      margin-bottom: var(--padding-default)

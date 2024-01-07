@@ -1,7 +1,7 @@
 import "./Panel.sass";
 
 import { type FC } from "react";
-import { classNames } from "functions";
+import { classNames } from "utils";
 
 import { PageProps } from "./Panel.interface";
 

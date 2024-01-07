@@ -2,7 +2,7 @@ import "./Container.sass";
 
 import { type FC } from "react";
 
-import { classNames } from "functions";
+import { classNames } from "utils";
 
 import { ContainerProps } from "./Container.interface";
 

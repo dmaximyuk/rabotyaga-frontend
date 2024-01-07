@@ -3,7 +3,7 @@ import "./Avatar.sass";
 import { FC, useState } from "react";
 
 import type { AvatarProps } from "./Avatar.interface";
-import { classNames } from "functions";
+import { classNames } from "utils";
 
 // const images = new Map<string, string>();
 

@@ -11,7 +11,8 @@
       "localization": ["localization"],
       "assets": ["assets"],
       "types": ["types"],
-      "store": ["store"]
+      "store": ["store"],
+      "utils": ["utils"]
     }
   }
 }

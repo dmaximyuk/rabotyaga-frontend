@@ -1,11 +1,20 @@
 .List
   &__item
     display: flex
-    gap: var(--padding-middle)
     position: relative
     padding: var(--padding-default)
     align-items: center
     overflow: hidden
+    justify-content: space-between
+
+    &__text
+      display: flex
+      align-items: center
+      gap: var(--padding-middle)
+
+    &__chevron
+      display: flex
+      align-items: center
 
     &:not(:last-child)
       &::before
@@ -20,5 +29,4 @@
     & > svg
       width: 24px
       height: 24px
-      color: var(--font-color-default)
       stroke-width: 1.7

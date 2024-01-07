@@ -4,6 +4,7 @@ interface ListItem {
   title: string;
   icon?: ReactNode;
   to: string;
+  disablePropagation?: boolean;
 }
 
 export interface ListProps extends Omit<HTMLAttributes<HTMLElement>, ""> {

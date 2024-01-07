@@ -2,9 +2,11 @@ import "./styles/main.scss";
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { TranslationProvider } from "i18nano";
 import { Router } from "elum-router/react";
+import { TranslationProvider } from "i18nano";
+
 import bridge from "@vkontakte/vk-bridge";
+
 import { App } from "core";
 
 import { ru } from "localization";

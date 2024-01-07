@@ -8,7 +8,7 @@ import {
   useMemo,
   useState,
 } from "react";
-import { classNames } from "functions";
+import { classNames } from "utils";
 
 import type { ViewProps } from "./View.interface";
 

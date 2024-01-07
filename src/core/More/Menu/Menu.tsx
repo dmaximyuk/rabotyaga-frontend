@@ -2,8 +2,15 @@ import "./Menu.sass";
 
 import { type FC } from "react";
 
-import { Container, Divider, Panel, PanelHeader, List } from "uikit";
-import { UserCard } from "components";
+import {
+  Container,
+  Divider,
+  Panel,
+  PanelHeader,
+  List,
+  Text,
+  Card,
+} from "uikit";
 
 import {
   IconBuildingBank,
@@ -13,41 +20,29 @@ import {
   IconShoppingCart,
   IconDice5,
   IconRun,
-  IconGift,
   IconBriefcase,
+  IconStars,
+  IconGift,
   IconTicket,
-  IconBellRinging,
 } from "@tabler/icons-react";
 
 import type { MenuProps } from "./Menu.interface";
+
 import { MenuPanels } from "types/routes";
 
 const itemsTree = [
   [
-    { to: MenuPanels.Present, icon: <IconGift /> },
-    { to: MenuPanels.Bonus, icon: <IconTicket /> },
+    { to: MenuPanels.Bank, icon: <IconBuildingBank />, disable: true },
+    { to: MenuPanels.Earnings, icon: <IconBriefcase />, disable: true },
   ],
   [
-    { to: MenuPanels.Bank, icon: <IconBuildingBank /> },
-    { to: MenuPanels.Earnings, icon: <IconBriefcase /> },
+    { to: MenuPanels.Entertainment, icon: <IconDice5 />, disable: true },
+    { to: MenuPanels.Quests, icon: <IconRun />, disable: true },
   ],
-  // { to: MenuPanels.Job, icon: <IconBriefcase /> },
-  // { to: MenuPanels.Business, icon: <IconHomeStats /> },
-  // { to: MenuPanels.Mining, icon: <IconCurrencyBitcoin /> },
-  // { to: MenuPanels.Investments, icon: <IconChartLine /> },
+  [{ to: MenuPanels.Shop, icon: <IconShoppingCart />, disable: true }],
   [
-    { to: MenuPanels.Entertainment, icon: <IconDice5 /> },
-    { to: MenuPanels.Quests, icon: <IconRun /> },
-  ],
-  [
-    { to: MenuPanels.Shop, icon: <IconShoppingCart /> },
-    // { to: MenuPanels.PremiumStore, icon: <IconDiamond /> },
-    // { to: MenuPanels.Market, icon: <IconBuildingStore /> },
-    // { to: MenuPanels.Auction, icon: <IconGavel /> },
-  ],
-  [
-    { to: MenuPanels.Help, icon: <IconHelpCircle /> },
-    { to: MenuPanels.Community, icon: <IconUsers /> },
+    { to: MenuPanels.Help, icon: <IconHelpCircle />, disable: true },
+    { to: MenuPanels.Community, icon: <IconUsers />, disable: true },
   ],
   [{ to: MenuPanels.Settings, icon: <IconSettings /> }],
 ];
@@ -55,20 +50,30 @@ const itemsTree = [
 export const Menu: FC<MenuProps> = () => {
   return (
     <Panel
-      pageHeader={
-        <PanelHeader
-          title="menu.title"
-          subtitle="menu.subtitle"
-          before={<IconBellRinging />}
-        />
-      }
+      pageHeader={<PanelHeader title="menu.title" subtitle="menu.subtitle" />}
     >
-      <Container className="Menu__container-user">
-        <UserCard
-          userId={123}
-          isShort
-          onClick={(userId) => console.log(userId)}
-        />
+      <Container className="Menu__cards_grid" isDefault>
+        <Card>
+          <IconStars />
+          <div>
+            <Text text="1 Уровень" tag="p" isBold />
+            <Text text="300 / 1000" tag="span" isTransparent />
+          </div>
+        </Card>
+        <Card>
+          <IconGift />
+          <div>
+            <Text text="Бонус" tag="p" isBold />
+            <Text text="00:12:01" tag="span" isTransparent />
+          </div>
+        </Card>
+        <Card>
+          <IconTicket />
+          <div>
+            <Text text="Промо-код" tag="p" isBold />
+            <Text text="Активация" tag="span" isTransparent />
+          </div>
+        </Card>
       </Container>
       <Divider />
       {itemsTree.map((items, index, array) => {
@@ -76,11 +81,12 @@ export const Menu: FC<MenuProps> = () => {
           <div key={`menu-list-item-${index}`}>
             <Container className="Menu__container-list">
               <List
-                items={items.map(({ to, icon }) => {
+                items={items.map((item) => {
                   return {
-                    title: `menu.items.${to}`,
-                    to,
-                    icon,
+                    title: `menu.items.${item.to}`,
+                    to: item.to,
+                    icon: item.icon,
+                    disablePropagation: (item as any)?.disable || false,
                   };
                 })}
               />
@@ -89,6 +95,9 @@ export const Menu: FC<MenuProps> = () => {
           </div>
         );
       })}
+      <Container className="Menu__footer" isDefault>
+        <Text text="Made with <3" tag="span" isTransparent />
+      </Container>
     </Panel>
   );
 };

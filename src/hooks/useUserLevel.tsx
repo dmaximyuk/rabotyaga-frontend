@@ -1,19 +1,24 @@
-interface UserLevelModel {
-  level: number;
-  percentage: string;
-  expFrom: number;
-  expTo: number;
-}
+import { useUser } from "hooks";
+
+import { calculatePercentageInRange } from "utils";
+
+import type { UserLevelModel } from "types/models";
 
 export const useUserLevel = (userId: number): UserLevelModel => {
-  const expFrom: number = 3;
-  const expTo: number = 21;
+  const {
+    exp: { from, to, current },
+  } = useUser(userId);
+
   const level: number = 1;
-  const percentage: string = ((expFrom / expTo) * 100).toFixed(2) + "%";
+  const percentage: string =
+    calculatePercentageInRange(from, to, current) + "%";
 
   return {
-    expFrom,
-    expTo,
+    exp: {
+      from,
+      to,
+      current,
+    },
     level,
     percentage,
   };

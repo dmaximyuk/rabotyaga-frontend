@@ -13,7 +13,7 @@ import {
 } from "uikit";
 import { UserCard } from "components";
 
-import { IconBellRinging, IconChevronRight } from "@tabler/icons-react";
+import { IconChevronRight } from "@tabler/icons-react";
 
 import { MenuPanels } from "types/routes";
 
@@ -26,13 +26,7 @@ const userNavigationCards = [
 export const User: FC = () => {
   return (
     <Panel
-      pageHeader={
-        <PanelHeader
-          title="home.title"
-          before={<IconBellRinging />}
-          subtitle="home.subtitle"
-        />
-      }
+      pageHeader={<PanelHeader title="home.title" subtitle="home.subtitle" />}
     >
       <Container isDefault>
         <Card>

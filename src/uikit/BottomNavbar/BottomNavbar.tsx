@@ -1,7 +1,7 @@
 import "./BottomNavbar.sass";
 
 import { type FC } from "react";
-import { classNames } from "functions";
+import { classNames } from "utils";
 import { nextPage } from "elum-router/react";
 
 import { Ripple } from "uikit";

@@ -3,7 +3,7 @@ import "./Card.sass";
 import { type FC } from "react";
 
 import type { CardProps } from "./Card.interface";
-import { classNames } from "functions";
+import { classNames } from "utils";
 
 export const Card: FC<CardProps> = (props) => {
   return (

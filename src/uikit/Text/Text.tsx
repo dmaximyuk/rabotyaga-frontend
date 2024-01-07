@@ -3,7 +3,7 @@ import "./Text.sass";
 import { type FC, createElement } from "react";
 import { useTranslation } from "i18nano";
 
-import { classNames } from "functions";
+import { classNames } from "utils";
 
 import type { TextProps } from "./Text.interface";
 
