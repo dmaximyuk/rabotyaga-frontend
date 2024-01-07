@@ -1,17 +1,15 @@
 import { useRouter } from "elum-router/react";
 
 import { View } from "uikit";
-import { Main } from "./Main/Main";
-import { Settings } from "./Settings/Settings";
-import { MenuPanels } from "../../types/routes";
 
-export const More = () => {
+import { Main } from "./Main/Main";
+
+export const Inventory = () => {
   const activePanel = useRouter("panel");
 
   return (
     <View activePanel={activePanel}>
-      <Main data-panel={MenuPanels.Menu} />
-      <Settings data-panel={MenuPanels.Settings} />
+      <Main data-panel="default" />
     </View>
   );
 };

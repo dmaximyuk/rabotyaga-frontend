@@ -9,7 +9,7 @@ import bridge from "@vkontakte/vk-bridge";
 
 import { App } from "core";
 
-import { ru } from "localization";
+import { ru } from "translations";
 
 const translations = {
   ru: async () => ru,

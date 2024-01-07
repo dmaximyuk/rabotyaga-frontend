@@ -5,6 +5,7 @@ import { Home, More } from "core";
 import { Root, BottomNavbar } from "uikit";
 
 import { IconHome, IconArchive, IconDots } from "@tabler/icons-react";
+import { Inventory } from "../Inventory/Inventory";
 
 export const App: FC = () => {
   const view = useRouter("view");
@@ -21,7 +22,7 @@ export const App: FC = () => {
       icon: <IconArchive />,
       key: "inventory",
       child() {
-        return <Home key={`app-view-${this.key}`} data-view={this.key} />;
+        return <Inventory key={`app-view-${this.key}`} data-view={this.key} />;
       },
     },
     {

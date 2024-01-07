@@ -1,4 +1,4 @@
-import "./Menu.sass";
+import "./Main.sass";
 
 import { type FC } from "react";
 
@@ -26,7 +26,7 @@ import {
   IconTicket,
 } from "@tabler/icons-react";
 
-import type { MenuProps } from "./Menu.interface";
+import type { MainProps } from "./Main.interface";
 
 import { MenuPanels } from "types/routes";
 
@@ -47,31 +47,58 @@ const itemsTree = [
   [{ to: MenuPanels.Settings, icon: <IconSettings /> }],
 ];
 
-export const Menu: FC<MenuProps> = () => {
+export const Main: FC<MainProps> = () => {
+  const bonusTimerEnable = true;
+
   return (
     <Panel
-      pageHeader={<PanelHeader title="menu.title" subtitle="menu.subtitle" />}
+      pageHeader={
+        <PanelHeader title="more.main.title" subtitle="more.main.subtitle" />
+      }
     >
       <Container className="Menu__cards_grid" isDefault>
         <Card>
           <IconStars />
           <div>
-            <Text text="1 Уровень" tag="p" isBold />
-            <Text text="300 / 1000" tag="span" isTransparent />
+            <Text
+              text="more.main.cards.level"
+              tag="p"
+              values={{ level: "1" }}
+              isBold
+            />
+            <Text
+              text="more.main.cards.level-exp"
+              values={{ from: "1", to: "100" }}
+              tag="span"
+              isTransparent
+            />
           </div>
         </Card>
         <Card>
           <IconGift />
           <div>
-            <Text text="Бонус" tag="p" isBold />
-            <Text text="00:12:01" tag="span" isTransparent />
+            <Text text="more.main.cards.bonus" tag="p" isBold />
+            <Text
+              text={
+                bonusTimerEnable
+                  ? "more.main.cards.bonus-timer"
+                  : "more.main.cards.bonus-available"
+              }
+              tag="span"
+              values={{ h: "00", m: "01", s: "12" }}
+              isTransparent
+            />
           </div>
         </Card>
         <Card>
           <IconTicket />
           <div>
-            <Text text="Промо-код" tag="p" isBold />
-            <Text text="Активация" tag="span" isTransparent />
+            <Text text="more.main.cards.promo-code" tag="p" isBold />
+            <Text
+              text="more.main.cards.promo-code-activation"
+              tag="span"
+              isTransparent
+            />
           </div>
         </Card>
       </Container>
@@ -83,7 +110,7 @@ export const Menu: FC<MenuProps> = () => {
               <List
                 items={items.map((item) => {
                   return {
-                    title: `menu.items.${item.to}`,
+                    title: `more.main.items.${item.to}`,
                     to: item.to,
                     icon: item.icon,
                     disablePropagation: (item as any)?.disable || false,

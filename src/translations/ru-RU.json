@@ -1,0 +1,64 @@
+{
+  "app": {
+    "name": "Rabotyaga"
+  },
+  "home": {
+    "main": {
+      "title": "Пользователь",
+      "subtitle": "Профиль"
+    }
+  },
+  "inventory": {
+    "main": {
+      "title": "Имущество",
+      "subtitle": "Инвентарь"
+    }
+  },
+  "more": {
+    "main": {
+      "title": "Еще",
+      "subtitle": "Меню",
+      "items": {
+        "notifications": "Уведомления",
+        "achievements": "Достижения",
+        "bonus": "Бонус",
+        "bank": "Банк",
+        "job": "Работа",
+        "earnings": "Заработок",
+        "business": "Бизнес",
+        "mining": "Майнинг",
+        "investments": "Инвестиции",
+        "entertainment": "Развлечения",
+        "quests": "Квесты",
+        "present": "Подарки",
+        "shop": "Магазин",
+        "premium_store": "Магазин - Premium",
+        "market": "Рынок",
+        "auction": "Аукцион",
+        "help": "Помощь",
+        "community": "Сообщество",
+        "settings": "Настройки"
+      },
+      "cards": {
+        "promo-code": "Промо-код",
+        "promo-code-activation": "Активация",
+        "bonus": "Бонус",
+        "bonus-available": "00:12:12",
+        "bonus-timer": "{{h}}:{{m}}:{{s}}",
+        "level": "{{level}} Уровень",
+        "level-exp": "{{from}} / {{to}}"
+      }
+    }
+  },
+  "settings": {
+    "title": "----",
+    "subtitle": "Настройки"
+  },
+  "users": {
+    "card": {
+      "level": {
+        "short": "{{level}} уровень ( {{percentage}} )"
+      }
+    }
+  }
+}
