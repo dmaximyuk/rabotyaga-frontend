@@ -19,7 +19,7 @@ export const Panel: FC<PageProps> = ({
           [className]: !!className,
         })}
       >
-        {children}
+        <div className="Panel__wrapper">{children}</div>
       </div>
     </>
   );

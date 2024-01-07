@@ -1,3 +1,3 @@
-export interface AvatarProps {
-  src: string;
-}
+import type { ImgHTMLAttributes } from "react";
+
+export interface AvatarProps extends ImgHTMLAttributes<HTMLElement> {}

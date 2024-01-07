@@ -4,7 +4,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { TranslationProvider } from "i18nano";
 import { Router } from "elum-router/react";
-
+import bridge from "@vkontakte/vk-bridge";
 import { App } from "core";
 
 import { ru } from "localization";
@@ -24,3 +24,22 @@ root.render(
     </TranslationProvider>
   </StrictMode>,
 );
+
+bridge.send("VKWebAppInit");
+
+bridge.send("VKWebAppGetConfig").then((e) => {
+  const getTheme = (scheme: string): "dark" | "light" => {
+    switch (scheme) {
+      case "vkcom_dark":
+      case "space_gray":
+      case "dark":
+        return "dark";
+      case "vkcom_light":
+      case "client_light":
+      default:
+        return "light";
+    }
+  };
+
+  console.log(getTheme(e.scheme ?? e.appearance));
+});

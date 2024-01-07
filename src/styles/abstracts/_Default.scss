@@ -4,8 +4,9 @@ html {
 }
 
 body {
+  height: -webkit-fill-available;
+  height: 100%;
   background-color: var(--body-background) !important;
-  height: inherit;
 }
 
 #root {

@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@tabler/icons-react": "^2.35.0",
-    "@vkontakte/vk-bridge": "^2.11.2",
+    "@vkontakte/vk-bridge": "^2.12.2",
     "elum-router": "^0.0.18",
     "elum-state": "^0.7.5",
     "framer-motion": "^10.16.4",

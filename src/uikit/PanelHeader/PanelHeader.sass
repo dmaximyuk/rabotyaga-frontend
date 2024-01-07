@@ -1,13 +1,14 @@
 .PanelHeader
   display: flex
   align-items: center
-  height: var(--page-header-height)
+  height: calc(var(--page-header-height) + var(--safe_area_inset_top))
   width: 100%
   padding: 0 var(--padding-default)
   background-color: var(--page-background)
   box-sizing: border-box
   gap: var(--padding-default)
   z-index: 1
+  //margin-top: 50px
   padding-top: var(--safe_area_inset_top)
 
   &__icon

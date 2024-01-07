@@ -1,12 +1,13 @@
 .BottomNavbar
+  position: relative
   width: 100%
-  height: var(--tabbar-height)
+  height: calc(var(--tabbar-height) + var(--safe_area_inset_bottom))
   background-color: var(--page-background)
   box-sizing: border-box
   color: var(--accent--extra)
+  overflow: hidden
   z-index: 2
   border-top: 1px solid color-mix(in srgb, var(--accent--extra) 10%, transparent)
-  padding-bottom: var(--safe_area_inset_bottom)
 
   &__wrapper
     overflow: hidden
@@ -16,11 +17,11 @@
 
   &__item
     position: relative
-    height: 100%
     flex: 1
     display: flex
     justify-content: center
     align-items: center
+    padding-bottom: var(--safe_area_inset_bottom)
 
     &_active
       color: var(--accent)

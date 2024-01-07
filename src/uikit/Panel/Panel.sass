@@ -2,8 +2,10 @@
   display: block
   position: relative
   width: 100vw
-  height: calc(100% - var(--padding-small) - var(--tabbar-height))
+  height: calc(100% - var(--padding-small) - var(--tabbar-height) - var(--safe_area_inset_top))
   background-color: var(--page-background)
   box-sizing: border-box
   overflow: hidden auto
-  padding: var(--padding-default) 0
+
+  &__wrapper
+    padding: var(--padding-default) 0
