@@ -13,3 +13,5 @@ export * from "./Divider/Divider";
 export * from "./List/List";
 export * from "./Card/Card";
 export * from "./Line/Line";
+export * from "./TextTruncate/TextTruncate";
+export * from "./Grid/Grid";

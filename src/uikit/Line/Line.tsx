@@ -12,6 +12,11 @@ export const Line: FC<LineProps> = (props) => {
         Line: true,
         [`${props.className}`]: !!props.className,
       })}
+      style={{
+        justifyContent: props.justifyContent || "flex-start",
+        alignItems: props.alignItems || "center",
+        gap: props.gap,
+      }}
     >
       {props.children}
     </div>

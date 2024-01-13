@@ -1,0 +1,38 @@
+.Home
+  &__main
+    &--remove-padding
+      padding-top: 0
+
+    &__user-card
+      margin: 0
+      width: 100%
+      background: linear-gradient(180deg, var(--body-background) 0%, var(--component-background--alpha) 100%)
+      padding: var(--padding-middle)
+      display: flex
+      flex-direction: column
+      gap: var(--padding-middle)
+
+      & > .Card
+        border-radius: 0
+        background: transparent
+
+        &:last-child
+          display: flex
+          gap: var(--padding-middle)
+
+.User
+  &__information
+    display: flex
+    align-items: center
+    gap: var(--padding-small)
+
+  &__cards
+    flex: 1
+    display: flex
+    flex-direction: column
+    padding: var(--padding-default)
+
+  &__navigation
+    display: flex
+    gap: var(--padding-default)
+    height: 60px

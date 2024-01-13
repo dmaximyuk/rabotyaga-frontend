@@ -1,6 +1,6 @@
 import "./Text.sass";
 
-import { type FC, createElement } from "react";
+import { type FC, createElement, useMemo } from "react";
 import { useTranslation } from "i18nano";
 
 import { classNames } from "utils";
@@ -18,6 +18,16 @@ export const Text: FC<TextProps> = ({
 }) => {
   const t = useTranslation();
 
+  const formattedText = useMemo(() => {
+    let txt = t(text, values) || text;
+
+    // symbol change
+    txt = txt.replaceAll("=>", "→");
+    txt = txt.replaceAll("$interpunct", "·");
+
+    return txt;
+  }, [text, values]);
+
   return createElement(
     tag,
     {
@@ -29,6 +39,6 @@ export const Text: FC<TextProps> = ({
         [`${className}`]: !!className,
       }),
     },
-    t(text, values) || text,
+    formattedText,
   );
 };

@@ -28,23 +28,23 @@ import {
 
 import type { MainProps } from "./Main.interface";
 
-import { MenuPanels } from "types/routes";
+import { Panels } from "store/models";
 
 const itemsTree = [
   [
-    { to: MenuPanels.Bank, icon: <IconBuildingBank />, disable: true },
-    { to: MenuPanels.Earnings, icon: <IconBriefcase />, disable: true },
+    { to: Panels.Bank, icon: <IconBuildingBank />, disable: true },
+    { to: Panels.Earnings, icon: <IconBriefcase />, disable: true },
   ],
   [
-    { to: MenuPanels.Entertainment, icon: <IconDice5 />, disable: true },
-    { to: MenuPanels.Quests, icon: <IconRun />, disable: true },
+    { to: Panels.Entertainment, icon: <IconDice5 />, disable: true },
+    { to: Panels.Quests, icon: <IconRun />, disable: true },
   ],
-  [{ to: MenuPanels.Shop, icon: <IconShoppingCart />, disable: true }],
+  [{ to: Panels.Shop, icon: <IconShoppingCart />, disable: true }],
   [
-    { to: MenuPanels.Help, icon: <IconHelpCircle />, disable: true },
-    { to: MenuPanels.Community, icon: <IconUsers />, disable: true },
+    { to: Panels.Community, icon: <IconUsers />, disable: true },
+    { to: Panels.Help, icon: <IconHelpCircle />, disable: true },
   ],
-  [{ to: MenuPanels.Settings, icon: <IconSettings /> }],
+  [{ to: Panels.Settings, icon: <IconSettings /> }],
 ];
 
 export const Main: FC<MainProps> = () => {
@@ -52,7 +52,7 @@ export const Main: FC<MainProps> = () => {
 
   return (
     <Panel
-      pageHeader={
+      panelHeader={
         <PanelHeader title="more.main.title" subtitle="more.main.subtitle" />
       }
     >
@@ -64,7 +64,6 @@ export const Main: FC<MainProps> = () => {
               text="more.main.cards.level"
               tag="p"
               values={{ level: "1" }}
-              isBold
             />
             <Text
               text="more.main.cards.level-exp"
@@ -77,7 +76,7 @@ export const Main: FC<MainProps> = () => {
         <Card>
           <IconGift />
           <div>
-            <Text text="more.main.cards.bonus" tag="p" isBold />
+            <Text text="more.main.cards.bonus" tag="p" />
             <Text
               text={
                 bonusTimerEnable
@@ -93,7 +92,7 @@ export const Main: FC<MainProps> = () => {
         <Card>
           <IconTicket />
           <div>
-            <Text text="more.main.cards.promo-code" tag="p" isBold />
+            <Text text="more.main.cards.promo-code" tag="p" />
             <Text
               text="more.main.cards.promo-code-activation"
               tag="span"

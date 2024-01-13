@@ -3,23 +3,31 @@ import "./Panel.sass";
 import { type FC } from "react";
 import { classNames } from "utils";
 
-import { PageProps } from "./Panel.interface";
+import type { PanelProps } from "./Panel.interface";
 
-export const Panel: FC<PageProps> = ({
+export const Panel: FC<PanelProps> = ({
   className = "",
+  panelWrapperClassName = "",
   children,
-  pageHeader,
+  panelHeader,
 }) => {
   return (
     <>
-      {pageHeader}
+      {panelHeader}
       <div
         className={classNames({
           Panel: true,
           [className]: !!className,
         })}
       >
-        <div className="Panel__wrapper">{children}</div>
+        <div
+          className={classNames({
+            Panel__wrapper: true,
+            [panelWrapperClassName]: !!panelWrapperClassName,
+          })}
+        >
+          {children}
+        </div>
       </div>
     </>
   );

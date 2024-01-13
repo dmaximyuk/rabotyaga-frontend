@@ -11,6 +11,8 @@ import { App } from "core";
 
 import { ru } from "translations";
 
+import { Theme } from "store/models";
+
 const translations = {
   ru: async () => ru,
 };
@@ -30,16 +32,16 @@ root.render(
 bridge.send("VKWebAppInit");
 
 bridge.send("VKWebAppGetConfig").then((e) => {
-  const getTheme = (scheme: string): "dark" | "light" => {
+  const getTheme = (scheme: string): Theme => {
     switch (scheme) {
       case "vkcom_dark":
       case "space_gray":
       case "dark":
-        return "dark";
+        return Theme.Dark;
       case "vkcom_light":
       case "client_light":
       default:
-        return "light";
+        return Theme.Light;
     }
   };
 

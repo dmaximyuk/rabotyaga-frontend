@@ -9,5 +9,10 @@ import type { UserAvatarProps } from "./UserAvatar.interface";
 
 export const UserAvatar: FC<UserAvatarProps> = (props) => {
   const user = useUser(props.userId);
-  return useMemo(() => <Avatar src={user.photo} />, [user.photo]);
+  const size = 52;
+
+  return useMemo(
+    () => <Avatar src={user.photo} style={{ width: size, height: size }} />,
+    [user.photo],
+  );
 };

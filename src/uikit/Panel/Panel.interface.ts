@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 
-export interface PageProps extends React.HTMLProps<HTMLDivElement> {
-  pageHeader: ReactNode;
+export interface PanelProps extends React.HTMLProps<HTMLDivElement> {
+  panelHeader: ReactNode;
+  panelWrapperClassName?: string;
 }

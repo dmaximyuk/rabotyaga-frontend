@@ -9,7 +9,7 @@ import type { SettingsProps } from "./Settings.interface";
 export const Settings: FC<SettingsProps> = () => {
   return (
     <Panel
-      pageHeader={
+      panelHeader={
         <PanelHeader
           title="settings.title"
           subtitle="settings.subtitle"

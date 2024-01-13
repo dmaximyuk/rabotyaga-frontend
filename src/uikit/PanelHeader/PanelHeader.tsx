@@ -5,12 +5,12 @@ import { backPage } from "elum-router/react";
 
 import { Text } from "uikit";
 
-import { IconArrowLeft } from "@tabler/icons-react";
+import { IconChevronLeft } from "@tabler/icons-react";
+
 import type { PageHeaderProps } from "./PanelHeader.interface";
 
 export const PanelHeader: FC<PageHeaderProps> = ({
   title,
-  subtitle,
   withBack = false,
   before,
 }) => {
@@ -18,7 +18,7 @@ export const PanelHeader: FC<PageHeaderProps> = ({
     <header className="PanelHeader">
       {withBack && !before && (
         <div className="PanelHeader__icon--before" onClick={() => backPage()}>
-          <IconArrowLeft />
+          <IconChevronLeft />
         </div>
       )}
 
@@ -27,8 +27,8 @@ export const PanelHeader: FC<PageHeaderProps> = ({
       )}
 
       <div>
-        <Text tag="p" text={title} />
-        <Text tag="span" isTransparent text={subtitle} />
+        <Text tag="p" text={title} isBold />
+        {/*<Text tag="span" isTransparent text={subtitle} />*/}
       </div>
     </header>
   );

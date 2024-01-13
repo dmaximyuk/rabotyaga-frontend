@@ -1,15 +1,10 @@
+// sass-lint:disable-all
+
 body {
   --safe_area_inset_top: 0px;
   --safe_area_inset_right: 0px;
   --safe_area_inset_bottom: 0px;
   --safe_area_inset_left: 0px;
-
-  @supports (padding-top: constant(safe-area-inset-top)) {
-    --safe_area_inset_top: constant(safe-area-inset-top);
-    --safe_area_inset_right: constant(safe-area-inset-right);
-    --safe_area_inset_bottom: constant(safe-area-inset-bottom);
-    --safe_area_inset_left: constant(safe-area-inset-left);
-  }
 
   @supports (padding-top: env(safe-area-inset-top)) {
     --safe_area_inset_top: env(safe-area-inset-top);
@@ -20,7 +15,8 @@ body {
 
   --body-background: #141414;
   --page-background: #141414;
-  --component-background: #222222;
+  --component-background: rgba(35, 35, 35);
+  --component-background--alpha: rgba(35, 35, 35, .75);
 
   --accent: #f1fe09;
   --accent--extra: #99a2ad;

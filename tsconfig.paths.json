@@ -2,16 +2,13 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "core": ["core"],
-      "uikit": ["uikit"],
-      "components": ["components"],
-      "functions": ["functions"],
-      "hooks": ["hooks"],
-      "styles": ["styles"],
-      "localization": ["localization"],
       "assets": ["assets"],
-      "types": ["types"],
+      "components": ["components"],
+      "core": ["core"],
+      "hooks": ["hooks"],
       "store": ["store"],
+      "translations": ["translations"],
+      "uikit": ["uikit"],
       "utils": ["utils"]
     }
   }

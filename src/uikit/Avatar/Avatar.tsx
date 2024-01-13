@@ -44,7 +44,13 @@ export const Avatar: FC<AvatarProps> = (props) => {
   // }, [props.src]);
 
   return (
-    <div className="Avatar">
+    <div
+      className={classNames({
+        Avatar: true,
+        [`${props.className}`]: !!props.className,
+      })}
+      style={props.style}
+    >
       <img
         className={classNames({
           Avatar__image: true,

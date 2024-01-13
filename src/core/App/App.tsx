@@ -1,11 +1,12 @@
-import { type FC } from "react";
+import { type FC, useEffect } from "react";
 import { useRouter } from "elum-router/react";
 
-import { Home, More } from "core";
-import { Root, BottomNavbar } from "uikit";
+import { BottomNavbar, Root } from "uikit";
+import { Events, Home, More } from "core";
 
-import { IconHome, IconArchive, IconDots } from "@tabler/icons-react";
-import { Inventory } from "../Inventory/Inventory";
+import { IconDots, IconHome, IconSpeakerphone } from "@tabler/icons-react";
+
+import { Views } from "store/models";
 
 export const App: FC = () => {
   const view = useRouter("view");
@@ -13,26 +14,30 @@ export const App: FC = () => {
   const views = [
     {
       icon: <IconHome />,
-      key: "main",
+      key: Views.Home,
       child() {
         return <Home key={`app-view-${this.key}`} data-view={this.key} />;
       },
     },
     {
-      icon: <IconArchive />,
-      key: "inventory",
+      icon: <IconSpeakerphone />,
+      key: Views.Events,
       child() {
-        return <Inventory key={`app-view-${this.key}`} data-view={this.key} />;
+        return <Events key={`app-view-${this.key}`} data-view={this.key} />;
       },
     },
     {
       icon: <IconDots />,
-      key: "more",
+      key: Views.More,
       child() {
         return <More key={`app-view-${this.key}`} data-view={this.key} />;
       },
     },
   ];
+
+  useEffect(() => {
+    console.log(view);
+  }, [view]);
 
   return (
     <Root

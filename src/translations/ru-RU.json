@@ -8,10 +8,22 @@
       "subtitle": "Профиль"
     }
   },
-  "inventory": {
+  "events": {
     "main": {
-      "title": "Имущество",
-      "subtitle": "Инвентарь"
+      "title": "Новости",
+      "subtitle": "События"
+    },
+    "cards": {
+      "title": "Название:",
+      "text": "Описание:",
+      "type": {
+        "update": "Обновление",
+        "important": "Важное",
+        "message": "Сообщение",
+        "congratulation": "Поздравление",
+        "promo-code": "Промо-код",
+        "rating": "Рейтинг"
+      }
     }
   },
   "more": {
@@ -43,7 +55,7 @@
         "promo-code": "Промо-код",
         "promo-code-activation": "Активация",
         "bonus": "Бонус",
-        "bonus-available": "00:12:12",
+        "bonus-available": "Доступен",
         "bonus-timer": "{{h}}:{{m}}:{{s}}",
         "level": "{{level}} Уровень",
         "level-exp": "{{from}} / {{to}}"
@@ -54,11 +66,9 @@
     "title": "----",
     "subtitle": "Настройки"
   },
-  "users": {
+  "user": {
     "card": {
-      "level": {
-        "short": "{{level}} уровень ( {{percentage}} )"
-      }
+      "subtitle": "{{level}} уровень $interpunct {{balance}}"
     }
   }
 }
