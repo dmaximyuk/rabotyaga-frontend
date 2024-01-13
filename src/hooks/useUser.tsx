@@ -1,4 +1,4 @@
-import type { UserModel } from "types/models";
+import type { UserModel } from "store/models";
 
 export const useUser = (_userId: number): UserModel => {
   const fullName: string = "Dmitry Maximyuk";

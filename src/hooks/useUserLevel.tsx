@@ -2,7 +2,7 @@ import { useUser } from "hooks";
 
 import { calculatePercentageInRange } from "utils";
 
-import type { UserLevelModel } from "types/models";
+import type { UserLevelModel } from "store/models";
 
 export const useUserLevel = (userId: number): UserLevelModel => {
   const {
