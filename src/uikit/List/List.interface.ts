@@ -1,6 +1,6 @@
 import type { HTMLAttributes, ReactNode } from "react";
 
-interface ListItem {
+export interface ListItemModel {
   title: string;
   icon?: ReactNode;
   to: string;
@@ -8,5 +8,5 @@ interface ListItem {
 }
 
 export interface ListProps extends Omit<HTMLAttributes<HTMLElement>, ""> {
-  items: ListItem[];
+  items: ListItemModel[];
 }

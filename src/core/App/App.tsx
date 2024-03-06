@@ -1,10 +1,10 @@
-import { type FC, useEffect } from "react";
+import { type FC } from "react";
 import { useRouter } from "elum-router/react";
 
 import { BottomNavbar, Root } from "uikit";
 import { Events, Home, More } from "core";
 
-import { IconDots, IconHome, IconSpeakerphone } from "@tabler/icons-react";
+import { IconDots, IconHome, IconBriefcase } from "@tabler/icons-react";
 
 import { Views } from "store/models";
 
@@ -20,8 +20,8 @@ export const App: FC = () => {
       },
     },
     {
-      icon: <IconSpeakerphone />,
-      key: Views.Events,
+      icon: <IconBriefcase />,
+      key: Views.Earnings,
       child() {
         return <Events key={`app-view-${this.key}`} data-view={this.key} />;
       },
@@ -34,10 +34,6 @@ export const App: FC = () => {
       },
     },
   ];
-
-  useEffect(() => {
-    console.log(view);
-  }, [view]);
 
   return (
     <Root

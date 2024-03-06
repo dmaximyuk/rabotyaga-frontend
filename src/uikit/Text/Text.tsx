@@ -12,6 +12,7 @@ export const Text: FC<TextProps> = ({
   text,
   tag,
   values,
+  style,
 
   isBold = false,
   isTransparent = false,
@@ -38,6 +39,7 @@ export const Text: FC<TextProps> = ({
         [`Text--transparent`]: isTransparent,
         [`${className}`]: !!className,
       }),
+      style,
     },
     formattedText,
   );

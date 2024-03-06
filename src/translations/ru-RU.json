@@ -63,12 +63,12 @@
     }
   },
   "settings": {
-    "title": "----",
-    "subtitle": "Настройки"
+    "title": "Настройки",
+    "subtitle": "----"
   },
   "user": {
     "card": {
-      "subtitle": "{{level}} уровень $interpunct {{balance}}"
+      "subtitle": "{{level}} ур. $interpunct {{exp}}"
     }
   }
 }

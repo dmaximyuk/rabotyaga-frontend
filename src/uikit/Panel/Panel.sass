@@ -2,10 +2,11 @@
   display: block
   position: relative
   width: 100vw
-  height: calc(100% - var(--page-header-height) - var(--safe_area_inset_top))
+  height: 100%
   background-color: var(--page-background)
   box-sizing: border-box
-  overflow: hidden auto
 
   &__wrapper
-    padding: var(--padding-default) 0
+    height: calc(100% - var(--page-header-height) - var(--safe_area_inset_top))
+    overflow: hidden auto
+

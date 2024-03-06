@@ -20,7 +20,6 @@ import {
   IconShoppingCart,
   IconDice5,
   IconRun,
-  IconBriefcase,
   IconStars,
   IconGift,
   IconTicket,
@@ -32,13 +31,10 @@ import { Panels } from "store/models";
 
 const itemsTree = [
   [
-    { to: Panels.Bank, icon: <IconBuildingBank />, disable: true },
-    { to: Panels.Earnings, icon: <IconBriefcase />, disable: true },
-  ],
-  [
-    { to: Panels.Entertainment, icon: <IconDice5 />, disable: true },
     { to: Panels.Quests, icon: <IconRun />, disable: true },
+    { to: Panels.Entertainment, icon: <IconDice5 />, disable: true },
   ],
+  [{ to: Panels.Bank, icon: <IconBuildingBank />, disable: true }],
   [{ to: Panels.Shop, icon: <IconShoppingCart />, disable: true }],
   [
     { to: Panels.Community, icon: <IconUsers />, disable: true },

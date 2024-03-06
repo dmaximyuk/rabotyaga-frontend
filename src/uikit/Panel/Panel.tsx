@@ -12,23 +12,21 @@ export const Panel: FC<PanelProps> = ({
   panelHeader,
 }) => {
   return (
-    <>
+    <div
+      className={classNames({
+        Panel: true,
+        [className]: !!className,
+      })}
+    >
       {panelHeader}
       <div
         className={classNames({
-          Panel: true,
-          [className]: !!className,
+          Panel__wrapper: true,
+          [panelWrapperClassName]: !!panelWrapperClassName,
         })}
       >
-        <div
-          className={classNames({
-            Panel__wrapper: true,
-            [panelWrapperClassName]: !!panelWrapperClassName,
-          })}
-        >
-          {children}
-        </div>
+        {children}
       </div>
-    </>
+    </div>
   );
 };

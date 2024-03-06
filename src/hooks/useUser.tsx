@@ -4,8 +4,8 @@ export const useUser = (_userId: number): UserModel => {
   const fullName: string = "Dmitry Maximyuk";
   const firstName: string = "Dmitry";
   const lastName: string = "Maximyuk";
-  const id: string = "id419149056";
-  const photo: string = "https://i.ytimg.com/vi/odHQSnrs5wI/maxresdefault.jpg";
+  const id: string = "uid419149056";
+  const photo: string = "https://placehold.co/200x200/png";
   const exp = {
     from: 1,
     to: 100,

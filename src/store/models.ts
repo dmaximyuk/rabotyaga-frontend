@@ -1,21 +1,20 @@
 export enum Views {
   Home = "main",
-  Events = "events",
   More = "more",
+  Earnings = "earnings",
 }
 
 export enum Panels {
   Default = "default",
+  Entertainment = "entertainment",
   Notifications = "notifications",
   Settings = "settings",
   Achievements = "achievements",
   Bank = "bank",
   Job = "job",
-  Earnings = "earnings",
   Business = "business",
   Mining = "mining",
   Investments = "investments",
-  Entertainment = "entertainment",
   Quests = "quests",
   Present = "present",
   Bonus = "bonus",

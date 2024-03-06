@@ -1,5 +1,5 @@
 import type { HTMLAttributes } from "react";
 
-export interface CardProps
-  extends Omit<HTMLAttributes<HTMLElement>, ""> {
+export interface CardProps extends Omit<HTMLAttributes<HTMLElement>, ""> {
+  showPropagation?: boolean;
 }

@@ -2,7 +2,7 @@ import "./Settings.sass";
 
 import { type FC } from "react";
 
-import { Panel, PanelHeader } from "uikit";
+import { Panel, PanelHeader, Placeholder } from "uikit";
 
 import type { SettingsProps } from "./Settings.interface";
 
@@ -17,7 +17,7 @@ export const Settings: FC<SettingsProps> = () => {
         />
       }
     >
-      Test
+      <Placeholder />
     </Panel>
   );
 };

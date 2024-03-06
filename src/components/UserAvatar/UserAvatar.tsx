@@ -9,7 +9,7 @@ import type { UserAvatarProps } from "./UserAvatar.interface";
 
 export const UserAvatar: FC<UserAvatarProps> = (props) => {
   const user = useUser(props.userId);
-  const size = 52;
+  const size = props.size || 52;
 
   return useMemo(
     () => <Avatar src={user.photo} style={{ width: size, height: size }} />,

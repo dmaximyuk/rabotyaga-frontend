@@ -1,45 +1,40 @@
 import "./List.sass";
 
-import { type FC } from "react";
+import { type FC, useCallback } from "react";
 import { nextPage } from "elum-router/react";
+import { throttle } from "lodash";
 
-import { Text } from "uikit";
+import { ListItem } from "uikit";
 
-import type { ListProps } from "./List.interface";
+import type { ListProps, ListItemModel } from "./List.interface";
 
-import { IconChevronRight } from "@tabler/icons-react";
+const List: FC<ListProps> = (props) => {
+  const throttledNextPage = useCallback(
+    throttle(
+      (value: string | undefined | false) =>
+        value && nextPage({ panel: value.toString() }),
+      250,
+    ),
+    [],
+  );
 
-export const List: FC<ListProps> = (props) => {
   return (
     <div className="List">
       {props.items.map((item) => {
         return (
-          <div
+          <ListItem
             key={`list-item-${item.to}`}
-            className="List__item"
-            onClick={
-              !item.disablePropagation
-                ? () => nextPage({ panel: item.to })
-                : undefined
+            icon={item.icon}
+            title={item.title}
+            disablePropagation={item.disablePropagation}
+            onClick={() =>
+              throttledNextPage(!item.disablePropagation && item.to)
             }
-          >
-            <div className="List__item__text">
-              {item.icon}
-              <Text text={item.title} tag="p" />
-            </div>
-            {!item.disablePropagation && (
-              <div className="List__item__chevron">
-                <IconChevronRight
-                  width={14}
-                  height={14}
-                  strokeWidth={4}
-                  color="var(--icon-color)"
-                />
-              </div>
-            )}
-          </div>
+          />
         );
       })}
     </div>
   );
 };
+
+export { List, ListItemModel };
