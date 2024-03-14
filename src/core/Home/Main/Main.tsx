@@ -17,6 +17,7 @@ import { Icon2fa } from "@tabler/icons-react";
 
 import { Panels } from "store/models";
 import { IconCustomChevronRight } from "assets";
+import { secondToTime } from "utils";
 
 const userNavigationCards = [
   { to: Panels.Bank, title: "Баланс", text: "3.1 млн" },
@@ -25,9 +26,24 @@ const userNavigationCards = [
 ];
 
 const dataMoreInfo = [
-  { icon: <Icon2fa />, title: "Test", text: "test" },
-  { icon: <Icon2fa />, title: "Test", text: "test" },
-  { icon: <Icon2fa />, title: "Test", text: "test" },
+  {
+    icon: <Icon2fa />,
+    title: "home.main.actions.quests.title",
+    text: "home.main.actions.quests.level.1",
+  },
+  {
+    icon: <Icon2fa />,
+    title: "home.main.actions.daily.title",
+    text: "home.main.actions.title",
+  },
+  {
+    icon: <Icon2fa />,
+    title: "home.main.actions.bonus.title",
+    text: "home.main.actions.bonus.timer",
+    textValues: {
+      date: secondToTime(5524),
+    },
+  },
 ];
 
 export const Main: FC = () => {
@@ -59,7 +75,7 @@ export const Main: FC = () => {
       <Container isDefault>
         <Text
           style={{ marginLeft: 12, marginBottom: 12, marginTop: 24 }}
-          text={"Test msg"}
+          text={"home.main.actions.title"}
           tag={"p"}
         />
         <div style={{ gap: 12, display: "flex", flexDirection: "column" }}>

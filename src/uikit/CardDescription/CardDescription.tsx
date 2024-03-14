@@ -13,8 +13,8 @@ export const CardDescription: FC<CardDescriptionProps> = (props) => {
     <Card className="CardDescription">
       {props.icon && <div className="CardDescription__icon">{props.icon}</div>}
       <div className="CardDescription__typography">
-        <Text text={props.text} tag={"p"} isTransparent />
-        <Text text={props.title} tag={"h2"} />
+        <Text text={props.title} tag={"p"} isTransparent />
+        <Text text={props.text} tag={"h2"} values={props.textValues} />
       </div>
       {props.showPropagation && (
         <IconCustomChevronRight className="CardDescription_chevron" />

@@ -1,6 +1,12 @@
 import "./Root.sass";
 
-import { type FC, type ReactElement, Children, useMemo } from "react";
+import {
+  type FC,
+  type ReactElement,
+  Children,
+  useMemo,
+  useEffect,
+} from "react";
 
 import { RootProps } from "./Root.interface";
 

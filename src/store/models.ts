@@ -1,3 +1,8 @@
+export enum Platform {
+  Android = "material",
+  Apple = "apple",
+}
+
 export enum Views {
   Home = "main",
   More = "more",

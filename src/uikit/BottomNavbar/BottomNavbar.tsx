@@ -8,10 +8,18 @@ import { nextPage } from "elum-router/react";
 import { Ripple } from "uikit";
 
 import type { BottomNavbarProps } from "./BottomNavbar.interface";
+import { bridgeTriggerHapticFeedback } from "@apiteam/twa-bridge/react";
 
 export const BottomNavbar: FC<BottomNavbarProps> = ({ items, activeTab }) => {
   const throttledSwitch = useCallback(
-    throttle((value) => nextPage({ view: value }), 250),
+    throttle((value) => {
+      nextPage({ view: value });
+      bridgeTriggerHapticFeedback({
+        type: "selection_change",
+        impact_style: "light",
+        notification_type: "success",
+      });
+    }, 250),
     [],
   );
 

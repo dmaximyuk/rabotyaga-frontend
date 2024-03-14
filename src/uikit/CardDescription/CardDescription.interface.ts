@@ -1,4 +1,5 @@
 import type { HTMLAttributes, ReactNode } from "react";
+import type { TranslationValues } from "i18nano";
 
 export interface CardDescriptionProps
   extends Omit<HTMLAttributes<HTMLElement>, ""> {
@@ -6,4 +7,5 @@ export interface CardDescriptionProps
   showPropagation?: boolean;
   title: string;
   text: string;
+  textValues?: TranslationValues;
 }

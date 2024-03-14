@@ -1,6 +1,7 @@
 .Root
   width: 100vw
-  height: 100%
+  height: var(--tg-theme-viewport-stable-height)
+  overflow: auto
   display: flex
   flex-direction: column
   flex-wrap: nowrap
@@ -9,12 +10,21 @@
   &__container
     display: flex
     position: relative
-    height: calc(100% - var(--tabbar-height))
+    height: var(--tg-theme-viewport-stable-height)
     overflow: hidden
     box-sizing: border-box
 
   &__navigation
-    display: flex
+    position: fixed
+    bottom: 0
+
     width: 100%
-    overflow: hidden
+    height: calc(var(--navbar-height) + var(--safe_area_inset_bottom))
+
+    display: flex
     justify-content: center
+
+    padding-bottom: var(--safe_area_inset_bottom)
+    background-color: var(--component-background)
+    overflow: hidden
+

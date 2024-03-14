@@ -41,6 +41,11 @@ const itemsTree = [
     { to: Panels.Help, icon: <IconHelpCircle />, disable: true },
   ],
   [{ to: Panels.Settings, icon: <IconSettings /> }],
+  [{ to: Panels.Settings, icon: <IconSettings /> }],
+  [{ to: Panels.Settings, icon: <IconSettings /> }],
+  [{ to: Panels.Settings, icon: <IconSettings /> }],
+  [{ to: Panels.Settings, icon: <IconSettings /> }],
+  [{ to: Panels.Settings, icon: <IconSettings /> }],
 ];
 
 export const Main: FC<MainProps> = () => {
